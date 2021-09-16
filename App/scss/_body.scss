@@ -1,0 +1,111 @@
+.main {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 88%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 3rem;
+  display: block;
+
+  @include breakpoint-up(medium) {
+    position: relative;
+  }
+}
+
+.home-intro {
+  &__image {
+    background-repeat: no-repeat;
+    background-image: url(../images/homepage/mobile/image-homepage-hero@2x.jpg);
+    height: 20rem;
+    background-size: cover;
+
+    @include breakpoint-up(medium) {
+      background-image: url(../images/homepage/tablet/image-homepage-hero@2x.jpg);
+      height: 45rem;
+      background-size: cover;
+    }
+    @include breakpoint-up(large) {
+      background-image: url(../images/homepage/desktop/image-homepage-hero@2x.jpg);
+      height: 34rem;
+      background-size: cover;
+    }
+  }
+  &__content {
+    position: absolute;
+    height: 40%;
+    bottom: 0;
+    background: white;
+    z-index: 2;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      height: 50%;
+      width: 40%;
+    }
+
+    @include breakpoint-down(small) {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+    }
+
+    &-title {
+      margin-top: 0;
+      height: 60%;
+      padding-bottom: 10px;
+      padding: 35px 25px 25px 0;
+      width: 90% auto;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      font-weight: 600;
+
+      @include breakpoint-down(small) {
+        padding: 25px 0;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    width: 12rem;
+    padding: 10px 0;
+
+    background-color: #1c3444;
+    z-index: 2;
+    bottom: 0;
+
+    &-icon {
+      background-color: #1c3444;
+      padding: 5px 0 0 15px;
+      width: 1px;
+      flex: 1;
+    }
+
+    .btn {
+      flex: 4;
+      padding: 11px;
+      background-color: #203a4c;
+
+      > p {
+        padding-left: 10px;
+        letter-spacing: 2px;
+        font-size: 11px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0;
+        color: white;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
