@@ -57,11 +57,17 @@ a {
   letter-spacing: 1.8px;
   color: #33323d;
   font-size: 11px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .main-nav-links-item > a:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  color: #5fb4a2;
+}
+
+.main-nav-links-item .active {
   color: #5fb4a2;
 }
 
@@ -223,5 +229,51 @@ a {
   margin: 0;
   color: white;
   font-size: 0.875rem;
+}
+
+.home-about {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 35rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-about__image {
+  width: 50%;
+  padding-top: 0 10px;
+  background-image: url(../images/homepage/desktop/image-homepage-profile@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-about__content {
+  border-top: 0.3px solid #33323d;
+  border-bottom: 0.3px solid #33323d;
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.7;
+  width: 30%;
+  margin: 0 7rem;
+}
+
+.home-about__content > h2 {
+  padding-top: 20px;
+}
+
+.home-about__button {
+  border: 1px solid #33323d;
+  width: 65%;
+  padding: 12px 35px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #33323d;
 }
 /*# sourceMappingURL=main.css.map */

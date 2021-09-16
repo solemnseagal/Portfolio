@@ -9,3 +9,7 @@
     @content;
   }
 }
+
+@mixin transit {
+  transition: 300ms ease-in-out;
+}

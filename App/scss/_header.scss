@@ -29,11 +29,16 @@
         letter-spacing: 1.8px;
         color: #33323d;
         font-size: 11px;
+        @include transit;
 
         &:hover {
-          transition: 0.5s;
+          @include transit;
           color: #5fb4a2;
         }
+      }
+
+      .active {
+        color: #5fb4a2;
       }
     }
   }
