@@ -1,13 +1,14 @@
+// all of the main body section
+
 .main {
   margin: 0;
   padding: 0;
 }
+
 .container {
   width: 88%;
   margin: auto;
-  // overflow: hidden;
   margin-top: 3rem;
-  display: block;
 
   @include breakpoint-up(medium) {
     position: relative;
@@ -15,6 +16,7 @@
 }
 
 .home-intro {
+  display: block;
   &__image {
     background-repeat: no-repeat;
     background-image: url(../images/homepage/mobile/image-homepage-hero@2x.jpg);
@@ -78,7 +80,7 @@
     height: 3rem;
     align-items: center;
     width: 12rem;
-    // background-color: #1c3444;
+    background-color: #1c3444;
     z-index: 2;
     bottom: 0;
     @include transit;
@@ -116,7 +118,6 @@
       background-color: #203a4c;
       float: right;
       letter-spacing: 1.5px;
-      // font-size: 8px;
       font-family: "Public Sans", sans-serif;
       font-weight: 400;
       text-transform: uppercase;
@@ -139,7 +140,6 @@
 
   @include breakpoint-down(small) {
     height: 55rem;
-    // height: 100%;
     flex-direction: column;
     margin-top: 4rem;
   }
@@ -177,7 +177,6 @@
     @include breakpoint-down(medium) {
       margin: 0;
       width: 47%;
-      // padding: auto;
     }
     @include breakpoint-down(small) {
       margin: 0;
@@ -218,9 +217,5 @@
       background-color: #33323d;
       color: #fff;
     }
-
-    // @include breakpoint-down(small) {
-    //   margin-bottom: 3rem;
-    // }
   }
 }
