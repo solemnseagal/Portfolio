@@ -8,6 +8,7 @@ body {
 *,
 *a {
   font-weight: 400;
+  font-family: "Public Sans", sans-serif;
 }
 
 ul {
@@ -18,10 +19,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-#t-h1 {
-  font-family: "Ibarra Real Nova", serif;
 }
 
 .main-nav {
@@ -174,6 +171,7 @@ a {
   margin-top: 0;
   height: 60%;
   padding: 2.5rem 5rem 2.5rem 0;
+  font-family: "Ibarra Real Nova", serif;
   font-size: 2.6rem;
   line-height: 2.5rem;
   letter-spacing: 0.5px;
@@ -243,8 +241,8 @@ a {
   background-color: #203a4c;
   float: right;
   letter-spacing: 1.5px;
-  font-size: 11px;
-  font-weight: bolder;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   margin: 0;
   display: -webkit-box;
@@ -257,7 +255,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .home-about {
@@ -307,7 +305,6 @@ a {
 .home-about__content {
   border-top: 0.3px solid #dcdcde;
   border-bottom: 0.3px solid #dcdcde;
-  font-family: "Public Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +337,14 @@ a {
   }
 }
 
+.home-about__content__heading {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .home-about__content > p {
+  font-family: "Public Sans", sans-serif;
   padding-bottom: 1rem;
   font-weight: 300;
   color: #33323d;
