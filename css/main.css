@@ -41,6 +41,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 88%;
   margin: 3.2rem auto 0;
   overflow: hidden;
@@ -81,6 +84,57 @@ a {
 
 .main-nav-links-item .active {
   color: #5fb4a2;
+}
+
+.main-nav-burger {
+  margin: 0;
+  border: 0;
+  width: 26px;
+  height: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.main-nav-burger-item {
+  width: 26px;
+  height: 1.5px;
+  left: 0;
+  position: absolute;
+  background: #33323d;
+  display: block;
+  top: 50%;
+}
+
+.main-nav-burger-item::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 1.8px;
+  top: -7px;
+  position: absolute;
+  background: #33323d;
+}
+
+.main-nav-burger-item::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 1.5px;
+  top: 6px;
+  position: absolute;
+  background: #33323d;
+}
+
+@media (min-width: 40em) {
+  .hide_for_desk {
+    display: none;
+  }
+}
+
+@media (max-width: 39.937em) {
+  .hide_for_mob {
+    display: none;
+  }
 }
 
 .jc-c {

@@ -1,6 +1,7 @@
 .main-nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 88%;
   margin: 3.2rem auto 0;
   overflow: hidden;
@@ -41,6 +42,80 @@
         color: #5fb4a2;
       }
     }
+  }
+
+  &-burger {
+    margin: 0;
+    border: 0;
+    width: 26px;
+    height: 1.5rem;
+    cursor: pointer;
+    position: relative;
+
+    &-item {
+      width: 26px;
+      height: 1.5px;
+      left: 0;
+      position: absolute;
+      background: #33323d;
+      display: block;
+      top: 50%;
+      // transform: translate(0, -50%);
+      // @include transt;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 1.8px;
+        top: -7px;
+        position: absolute;
+        background: #33323d;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 1.5px;
+        top: 6px;
+        position: absolute;
+        background: #33323d;
+      }
+
+      // &.open {
+      //   transform: rotate(-180deg);
+      //   background: transparent;
+
+      //   &::before {
+      //     transform: rotate(45deg);
+      //     top: 4%;
+      //     height: 2px;
+      //     left: -4.4%;
+      //     @include transt;
+      //   }
+
+      //   &::after {
+      //     transform: rotate(-45deg);
+      //     @include transt;
+      //     top: -0.8%;
+      //     right: 4.4%;
+      //   }
+      // }
+    }
+  }
+}
+
+.hide_for_desk {
+  @include breakpoint-up(medium) {
+    display: none;
+    // visibility: hidden;
+  }
+}
+.hide_for_mob {
+  @include breakpoint-down(small) {
+    display: none;
+    // visibility: hidden;
   }
 }
 
