@@ -187,7 +187,10 @@
 
     &__heading {
       font-family: "Ibarra Real Nova", serif;
-      font-size: 30px;
+      color: #33323d;
+      letter-spacing: 0;
+      line-height: 1;
+      font-size: 2.3rem;
       font-weight: 600;
     }
 
@@ -204,11 +207,13 @@
     width: 8rem;
     padding: 12px 35px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 700;
     color: #33323d;
+    font-family: "Public Sans", sans-serif;
+    letter-spacing: 1.5px;
     @include transit;
 
     &:hover {
@@ -217,5 +222,50 @@
       background-color: #33323d;
       color: #fff;
     }
+  }
+}
+
+.call-to-action {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint-down(small) {
+    width: 90%;
+    flex-direction: column;
+    margin: 4rem auto;
+  }
+
+  &__heading {
+    width: 33%;
+
+    @include breakpoint-down(small) {
+      text-align: center;
+      margin-right: 0;
+      width: inherit;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 45%;
+    border-top: 1px solid #33323d;
+    opacity: 0.6;
+
+    @include breakpoint-down(small) {
+      width: 0;
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 6rem;
+    height: 1.2rem;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -355,7 +355,10 @@ a {
 
 .home-about__content__heading {
   font-family: "Ibarra Real Nova", serif;
-  font-size: 30px;
+  color: #33323d;
+  letter-spacing: 0;
+  line-height: 1;
+  font-size: 2.3rem;
   font-weight: 600;
 }
 
@@ -371,15 +374,17 @@ a {
   width: 8rem;
   padding: 12px 35px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 600;
+  font-weight: 700;
   color: #33323d;
+  font-family: "Public Sans", sans-serif;
+  letter-spacing: 1.5px;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
@@ -390,6 +395,74 @@ a {
   transition: 300ms ease-in-out;
   background-color: #33323d;
   color: #fff;
+}
+
+.call-to-action {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 39.937em) {
+  .call-to-action {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 4rem auto;
+  }
+}
+
+.call-to-action__heading {
+  width: 33%;
+}
+
+@media (max-width: 39.937em) {
+  .call-to-action__heading {
+    text-align: center;
+    margin-right: 0;
+    width: inherit;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.call-to-action__line {
+  display: block;
+  width: 45%;
+  border-top: 1px solid #33323d;
+  opacity: 0.6;
+}
+
+@media (max-width: 39.937em) {
+  .call-to-action__line {
+    width: 0;
+    display: none;
+  }
+}
+
+.call-to-action__button {
+  width: 6rem;
+  height: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer {
