@@ -60,8 +60,7 @@
       background: #33323d;
       display: block;
       top: 50%;
-      // transform: translate(0, -50%);
-      // @include transt;
+      @include transit;
 
       &::before {
         content: "";
@@ -71,6 +70,7 @@
         top: -6px;
         position: absolute;
         background: #33323d;
+        @include transit;
       }
 
       &::after {
@@ -81,27 +81,26 @@
         top: 6px;
         position: absolute;
         background: #33323d;
+        @include transit;
       }
 
-      // &.open {
-      //   transform: rotate(-180deg);
-      //   background: transparent;
+      &.open {
+        transform: rotate(180deg);
+        background: transparent;
+        transition: 500ms ease-in-out;
 
-      //   &::before {
-      //     transform: rotate(45deg);
-      //     top: 4%;
-      //     height: 2px;
-      //     left: -4.4%;
-      //     @include transt;
-      //   }
+        &::before {
+          transform: rotate(45deg);
+          transform-origin: 6px 5px;
+          @include transit;
+        }
 
-      //   &::after {
-      //     transform: rotate(-45deg);
-      //     @include transt;
-      //     top: -0.8%;
-      //     right: 4.4%;
-      //   }
-      // }
+        &::after {
+          transform: rotate(-45deg);
+          transform-origin: 6px -4px;
+          @include transit;
+        }
+      }
     }
   }
 }

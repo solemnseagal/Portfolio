@@ -103,6 +103,8 @@ a {
   background: #33323d;
   display: block;
   top: 50%;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .main-nav-burger-item::before {
@@ -113,6 +115,8 @@ a {
   top: -6px;
   position: absolute;
   background: #33323d;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .main-nav-burger-item::after {
@@ -123,6 +127,34 @@ a {
   top: 6px;
   position: absolute;
   background: #33323d;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.main-nav-burger-item.open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: transparent;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.main-nav-burger-item.open::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 6px 5px;
+          transform-origin: 6px 5px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.main-nav-burger-item.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 6px -4px;
+          transform-origin: 6px -4px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 @media (min-width: 40em) {
