@@ -13,6 +13,10 @@
   @include breakpoint-up(medium) {
     position: relative;
   }
+
+  @include breakpoint-down(small) {
+    margin-top: 2rem;
+  }
 }
 
 .home-intro {
