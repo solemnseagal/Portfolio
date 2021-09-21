@@ -4,7 +4,7 @@
   align-items: center;
   width: 88%;
   margin: 3.2rem auto 0;
-  overflow: hidden;
+  // overflow: hidden;
 
   //   &-logo {
   //     overflow: hidden;
@@ -45,6 +45,7 @@
   }
 
   &-burger {
+    z-index: 4;
     margin: 0;
     border: 0;
     width: 26px;
@@ -87,18 +88,18 @@
       &.open {
         transform: rotate(180deg);
         background: transparent;
-        transition: 500ms ease-in-out;
+        transition: 600ms ease-in-out;
 
         &::before {
-          transform: rotate(45deg);
           transform-origin: 6px 5px;
           @include transit;
+          transform: rotate(45deg);
         }
 
         &::after {
+          @include transit;
           transform: rotate(-45deg);
           transform-origin: 6px -4px;
-          @include transit;
         }
       }
     }
@@ -108,13 +109,49 @@
 .hide_for_desk {
   @include breakpoint-up(medium) {
     display: none;
-    // visibility: hidden;
   }
 }
 .hide_for_mob {
   @include breakpoint-down(small) {
-    display: none;
-    // visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 1px;
+    right: 0;
+    transition: 500ms ease;
+
+    & .overlay {
+      z-index: 3;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #e5e5e6, #9d9da3);
+      border-radius: 50%;
+      left: 50px;
+      transform: translate(30%, -10%) rotate(-10deg);
+      transition: 500ms ease;
+    }
+
+    & .main-nav-links {
+      z-index: 4;
+      position: absolute;
+      flex-direction: column;
+      top: 30%;
+      right: 10%;
+      transition: 500ms ease;
+
+      &-item {
+        flex-direction: column;
+        margin: 12px;
+        transition: 500ms ease;
+      }
+    }
+
+    &:not(.show) {
+      display: none;
+    }
   }
 }
 

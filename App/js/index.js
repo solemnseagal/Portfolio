@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".main-nav-burger");
 const hamburgerItem = document.querySelector(".main-nav-burger-item");
-
+const mobileToggle = document.querySelector(".hide_for_mob");
 // if (hamburger) {
 //   console.log("yes");
 // }
@@ -8,10 +8,10 @@ const hamburgerItem = document.querySelector(".main-nav-burger-item");
 hamburger.addEventListener("click", function togglebtn() {
   if (hamburgerItem.classList.contains("open")) {
     hamburgerItem.classList.remove("open");
-    console.log("clicked");
+    mobileToggle.classList.remove("show");
   } else {
     hamburgerItem.classList.add("open");
-    console.log("unclicked");
+    mobileToggle.classList.add("show");
   }
 });
 

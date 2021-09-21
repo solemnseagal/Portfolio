@@ -95,6 +95,11 @@
       &__icon {
         > path {
           fill: #fff;
+          @include transit;
+          &:hover {
+            @include transit;
+            fill: #5fb4a2;
+          }
         }
       }
     }
